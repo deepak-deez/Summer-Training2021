@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 
-
 <head>
     <link rel="stylesheet" href="style.css" />
+<script>
+    function lw() {
+    var i = document.getElementById("in1").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.1.12/cgi-bin/lw.py?x=" + i, true);
+    
+    xhr.send();
+    
+    xhr.onload = function() {
+        var output = xhr.responseText;
+        document.getElementById("c2").innerHTML = output;
+
+    }
+    }
+    </script>
 </head>
 
 <body>
@@ -31,30 +45,14 @@
         </div>
         <div id="c1">
             <div class="container" id="c3">
-                <form>
+                <div>
                     [root@localhost~]# <input type="text" id="in1" name="x" placeholder="Enter your command">
-                    <button type="submit" onclick="lw()">submit</button>
-                </form>
+                    <button onclick="lw();">submit</button>
+                </div>
             </div>
         </div>
     </div>
-    <div id="c2">
-        Output will be displayed here...
-    </div>
+    <pre id="c2">Output will be displayed here...</pre>
 
 </body>
-<script>
-    function lw() {
-    var i = document.getElementById("in1").value
-    var xhr = new XMLHttpRequest();
-    
-    xhr.open("GET", "http://192.168.1.12/cgi-bin/lw.py?x=" + i, true);
-    
-    xhr.send();
-    
-    xhr.onload = function() {
-        var output = xhr.responseText;
-        document.getElementById("c2").innerHTML = output;
-    }
-    }
-    </script>
+
