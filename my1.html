@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    
+    <div id="t1" class="dropdown">
+        <button class="dropbtn">Docker commands</button>
+        <div class="dropdown-content">
+            <a href="#">systemctl start docker</a>
+            <a href="#">systemctl status docker</a>
+            <a href="#">systemctl stop docker</a>
+            <a  href="#">docker ps</a>
+          <a href="#">docker images</a>
+          <a href="#">docker inspect</a>
+          <a href="#">docker build</a>
+          <a href="#">docker run</a>
+          <a href="#">docker start</a>
+          <a href="#">docker attach</a>
+          <a href="#">docker info</a>
+          <a href="#">docker kill</container></a>
+        </div>
+      </div>
+
+    <div id="card">
+        <div id="h1" class="container">
+            <p id="1">My app</p>
+        </div>
+        <div id="c1">
+            <div class="container" id="c3">
+                <form>
+                    [root@localhost~]# <input type="text" id="in1" name="x" placeholder="Enter your command">
+                    <button type="submit" onclick="lw()">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="c2">
+        Output will be displayed here...
+    </div>
+
+</body>
+<script>
+    function lw() {
+    var i = document.getElementById("in1").value
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open("GET", "http://192.168.1.12/cgi-bin/lw.py?x=" + i, true);
+    
+    xhr.send();
+    
+    xhr.onload = function() {
+        var output = xhr.responseText;
+        document.getElementById("c2").innerHTML = output;
+    }
+    }
+    </script>

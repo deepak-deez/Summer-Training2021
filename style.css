@@ -1,0 +1,101 @@
+p{
+    text-align: center;
+    margin: auto;
+    text-shadow:1cm;
+    background-color:rgba(86, 1, 165, 0.932);
+    height: 50px;
+    border-radius: 1ch;    
+    width: 400px;
+    font-size: 30px;
+
+}
+#card{
+margin-top: 130px;
+}
+
+form{
+    text-align: center;
+}
+div#c1{
+    
+    margin: auto;
+    border-radius: 0.5ch;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100px;
+    
+    width: 400px;
+    background-color:rgba(255, 255, 255, 0.452);
+    align-items: center;
+    text-align: center;
+}
+
+#c3{
+    margin: auto;
+    
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+  
+#c2{
+    background-color: black;
+    color: aliceblue;
+    height: 600px;
+    width: 500px;
+    text-align:left;
+    margin-left: 1000px;
+    margin-top: -440px;
+    padding-left: 0.1cm;
+    border: 2px solid snow;
+    overflow-y: hidden;
+    
+}
+body{
+    background-image: url("do.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+    margin-top: 0.5cm;
+    border-width: 10px;
+}
+#t1{
+    padding-left: 1cm;
+}
+
+.dropbtn {
+  background-color: #1504aa4d;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
